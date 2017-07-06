@@ -4,7 +4,6 @@
 /Users/kenjihirabayashi/Desktop/udemy/c-sharp-for-beginners/HelloWorld/HelloWorld/bin/Debug/netcoreapp1.1/HelloWorld.dll
 /Users/kenjihirabayashi/Desktop/udemy/c-sharp-for-beginners/HelloWorld/HelloWorld/bin/Debug/netcoreapp1.1/HelloWorld.pdb
 /Users/kenjihirabayashi/Desktop/udemy/c-sharp-for-beginners/HelloWorld/HelloWorld/obj/Debug/netcoreapp1.1/HelloWorld.csprojResolveAssemblyReference.cache
-/Users/kenjihirabayashi/Desktop/udemy/c-sharp-for-beginners/HelloWorld/HelloWorld/obj/Debug/netcoreapp1.1/HelloWorld.csproj.CoreCompileInputs.cache
 /Users/kenjihirabayashi/Desktop/udemy/c-sharp-for-beginners/HelloWorld/HelloWorld/obj/Debug/netcoreapp1.1/HelloWorld.AssemblyInfo.cs
 /Users/kenjihirabayashi/Desktop/udemy/c-sharp-for-beginners/HelloWorld/HelloWorld/obj/Debug/netcoreapp1.1/HelloWorld.dll
 /Users/kenjihirabayashi/Desktop/udemy/c-sharp-for-beginners/HelloWorld/HelloWorld/obj/Debug/netcoreapp1.1/HelloWorld.pdb
