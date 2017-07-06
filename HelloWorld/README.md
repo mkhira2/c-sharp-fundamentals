@@ -1,6 +1,6 @@
 # c-sharp-fundamentals
 
-Basics of c#. Check git commit history for different examples of boilerplate code. Enjoy!
+Basics of c#. Check git commit history for different code examples. Enjoy!
 
 ## Installation
 
