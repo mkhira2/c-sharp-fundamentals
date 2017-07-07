@@ -7,15 +7,12 @@ namespace Conditionals
     {
         static void Main(string[] args)
         {
-            var name = "John Smith";
-            //for (var i = 0; i < name.Length; i++)
-            //{
-            //    Console.WriteLine(name[i]);
-            //}
-
-            foreach (var character in name)
+            var i = 0;
+            while (i <= 10)
             {
-                Console.WriteLine(character);
+                if (i % 2 == 0)
+                    Console.WriteLine(i);
+                i++;
             }
         }
     }
