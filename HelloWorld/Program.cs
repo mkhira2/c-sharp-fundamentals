@@ -2,28 +2,21 @@
 
 namespace Conditionals
 {
-    public enum Season {
-        Spring,
-        Summer,
-        Autumn,
-        Winter
-    }
+    
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter picture width: ");
-            int num1 = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Enter picture height: ");
-            int num2 = Convert.ToInt32(Console.ReadLine());
-            if (num1 > num2)
-            {
-                Console.WriteLine("Please print picture in landscape mode.");
+            for (var i = 1; i <= 10; i++) {
+                if (i % 2 == 0) {
+                    Console.WriteLine(i);
+                }
             }
-            else
-            {
-                Console.WriteLine("Please print picture in portrait mode.");
+
+            for (var i = 10; i >= 1; i--) {
+                if (i % 2 == 0) {
+                    Console.WriteLine(i);
+                }
             }
         }
     }
