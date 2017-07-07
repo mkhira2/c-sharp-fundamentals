@@ -12,18 +12,15 @@ namespace Conditionals
     {
         static void Main(string[] args)
         {
-            var season = Season.Summer;
-
-            switch (season)
+            Console.WriteLine("Enter a number: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+            if (num >= 1 && num <=10)
             {
-                case Season.Autumn:
-                case Season.Summer:
-                    Console.WriteLine("We've got a promotion.");
-                    break;
-
-                default:
-                    Console.WriteLine("No current promotions.");
-                    break;
+                Console.WriteLine("Valid");
+            }
+            else
+            {
+                Console.WriteLine("Invalid");
             }
         }
     }
