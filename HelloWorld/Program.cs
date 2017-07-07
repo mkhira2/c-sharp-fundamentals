@@ -12,18 +12,18 @@ namespace Conditionals
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a number: ");
+            Console.WriteLine("Enter picture width: ");
             int num1 = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Enter another number: ");
+            Console.WriteLine("Enter picture height: ");
             int num2 = Convert.ToInt32(Console.ReadLine());
             if (num1 > num2)
             {
-                Console.WriteLine("{0} is greater than {1}", num1, num2);
+                Console.WriteLine("Please print picture in landscape mode.");
             }
             else
             {
-                Console.WriteLine("{0} is greater than {1}", num2, num1);
+                Console.WriteLine("Please print picture in portrait mode.");
             }
         }
     }
