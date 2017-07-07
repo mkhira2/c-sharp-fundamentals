@@ -2,21 +2,22 @@
 
 namespace Conditionals
 {
-    
+
     class Program
     {
         static void Main(string[] args)
         {
-            var random = new Random();
+            Console.Write("Enter a number: ");
+            var input = Console.ReadLine();
+            int value;
 
-            const int passwordLength = 10;
-            var buffer = new char[passwordLength];
-            for (var i = 0; i < passwordLength; i++)
-                buffer[i] = (char)('a' + random.Next(0, 26));
-
-            var password = new string(buffer);
-
-            Console.WriteLine(password);
+            if (int.TryParse(input, out value))
+            {
+                Console.WriteLine(input);
+            }
+            else {
+                Console.WriteLine("That's not a number!");
+            }
         }
     }
 }
