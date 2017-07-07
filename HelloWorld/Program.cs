@@ -1,33 +1,25 @@
 ﻿using System;
 
-namespace CSharpFundamentals
+namespace Conditionals
 {
-    public class Person
-    {
-        public int Age;
-    }
-
     class Program
     {
         static void Main(string[] args)
         {
-            var number = 1;
-            Increment(number);
-            Console.WriteLine(number);
+            int hour = 10;
 
-            var person = new Person() { Age = 20 };
-            MakeOld(person);
-            Console.WriteLine(person.Age);
-        }
+            if (hour > 0 && hour < 12)
+            {
+                Console.WriteLine("It's morning.");
 
-        public static void Increment(int numbner)
-        {
-            //number += 10;
-        }
-
-        public static void MakeOld(Person person)
-        {
-            person.Age += 10;
+            }
+            else if (hour >= 12 && hour < 18) {
+				Console.WriteLine("It's afternoon.");
+            }
+            else 
+            {
+                Console.WriteLine("It's evening.");
+			}
         }
     }
 }
