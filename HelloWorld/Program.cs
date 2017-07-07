@@ -2,24 +2,29 @@
 
 namespace Conditionals
 {
+    public enum Season {
+        Spring,
+        Summer,
+        Autumn,
+        Winter
+    }
     class Program
     {
         static void Main(string[] args)
         {
-            /*
-            float price;
-            if (isGoldCustomer) {
-                price = 19.95f;
-            else
-                price = 29.95f
-            */
+            var season = Season.Summer;
 
-            bool isGoldCustomer = true;
+            switch (season)
+            {
+                case Season.Autumn:
+                case Season.Summer:
+                    Console.WriteLine("We've got a promotion.");
+                    break;
 
-            float price = (isGoldCustomer) ? 19.95f : 29.95f;
-
-
-            Console.WriteLine(price);
+                default:
+                    Console.WriteLine("No current promotions.");
+                    break;
+            }
         }
     }
 }
