@@ -13,14 +13,17 @@ namespace Conditionals
         static void Main(string[] args)
         {
             Console.WriteLine("Enter a number: ");
-            int num = Convert.ToInt32(Console.ReadLine());
-            if (num >= 1 && num <=10)
+            int num1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter another number: ");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+            if (num1 > num2)
             {
-                Console.WriteLine("Valid");
+                Console.WriteLine("{0} is greater than {1}", num1, num2);
             }
             else
             {
-                Console.WriteLine("Invalid");
+                Console.WriteLine("{0} is greater than {1}", num2, num1);
             }
         }
     }
