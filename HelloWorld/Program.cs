@@ -7,35 +7,31 @@ namespace CSharpFundamentals
     {
         static void Main(string[] args)
         {
-            // Creating
+            var fullName = "Kenji Hirabayashi ";
+            Console.WriteLine("Trim: '{0}'", fullName.Trim());
+            Console.WriteLine("ToUpper: '{0}'", fullName.ToUpper());
 
-            var timeSpan = new TimeSpan(1, 2, 3);
+            var index = fullName.IndexOf(' ');
+            var firstName = fullName.Substring(0, index);
+            var lastName = fullName.Substring(index + 1);
+            Console.WriteLine("FirstName: " + firstName);
+            Console.WriteLine("LastName: " + lastName);
 
-            var timeSpan1 = new TimeSpan(1, 0, 0);
-            var timeSpan2 = TimeSpan.FromHours(1);
+            var names = fullName.Split(' ');
+            Console.WriteLine("FirstName: " + names[0]);
+            Console.WriteLine("LastName: " + names[1]);
 
-            var start = DateTime.Now;
-            var end = DateTime.Now.AddMinutes(2);
-            var duration = end - start;
-            Console.WriteLine("Duration: " + duration);
+            Console.WriteLine(fullName.Replace("Kenji", "Michael"));
 
-            // Properties
+            if (String.IsNullOrWhiteSpace(" "))
+                Console.WriteLine("Invalid");
 
-            Console.WriteLine("Minutes: " + timeSpan.Minutes);
-            Console.WriteLine("Total Minutes: " + timeSpan.TotalMinutes);
+            var str = "25";
+            var age = Convert.ToByte(str);
+            Console.WriteLine(age);
 
-            // Add 
-
-            Console.WriteLine("Add Example: " + timeSpan.Add(TimeSpan.FromMinutes(8)));
-            Console.WriteLine("Subtract Example: " + timeSpan.Subtract(TimeSpan.FromMinutes(8)));
-
-            // ToString
-
-            Console.WriteLine("ToString :" + timeSpan.ToString());
-
-            // Parse
-
-            Console.WriteLine("Parse: " + TimeSpan.Parse("01:02:03"));
+            float price = 29.95f;
+			Console.WriteLine(price.ToString("C"));
         }
     }
 }
