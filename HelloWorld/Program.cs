@@ -7,23 +7,21 @@ namespace CSharpFundamentals
     {
         static void Main(string[] args)
         {
-            var path = @"c:\somefile.jpg";
+            Directory.CreateDirectory(@"c\temp\folder1");
 
-            File.Copy(@"c:temp\myfile.jpg", @"d:\temp\myfile.jpg", true);
-            File.Delete(path);
-            if (File.Exists(path))
-            {
-                //
-            }
-            var content = File.ReadAllText(path);
+            var files = Directory.GetFiles(@"c:\projects\CSharpFundamentals", "*.*", SearchOption.AllDirectories);
+            foreach (var file in files) 
+                System.Console.WriteLine(file);
 
-            var fileInfo = new FileInfo(path);
-            fileInfo.CopyTo("...");
-            fileInfo.Delete();
-            if (fileInfo.Exists)
-            {
-                //
-            }
+            var directories = Directory.GetDirectories(@"c\projects\CSharpFundamentals", "*.*", SearchOption.AllDirectories);
+            foreach (var directory in directories)
+                System.Console.WriteLine(directory);
+
+            Directory.Exists("...");
+
+            var directoryInfo = new DirectoryInfo("...");
+            directoryInfo.GetFiles();
+            directoryInfo.GetDirectories();
         }
     }
 }
