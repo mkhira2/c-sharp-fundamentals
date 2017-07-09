@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CSharpFundamentals
 {
@@ -7,31 +8,31 @@ namespace CSharpFundamentals
     {
         static void Main(string[] args)
         {
-            var fullName = "Kenji Hirabayashi ";
-            Console.WriteLine("Trim: '{0}'", fullName.Trim());
-            Console.WriteLine("ToUpper: '{0}'", fullName.ToUpper());
+			var sentence = "This is going to be a really really really really long sentence.";
+            var summary = SummarizeText(sentence, 25);
+            Console.WriteLine(summary);
+        }
 
-            var index = fullName.IndexOf(' ');
-            var firstName = fullName.Substring(0, index);
-            var lastName = fullName.Substring(index + 1);
-            Console.WriteLine("FirstName: " + firstName);
-            Console.WriteLine("LastName: " + lastName);
+        static string SummarizeText(string text, int maxLength = 20)
+        {
+            if (text.Length < maxLength)
+                return text;
+            
+			var words = text.Split(' ');
+			var totalCharacters = 0;
+			var summaryWords = new List<string>();
 
-            var names = fullName.Split(' ');
-            Console.WriteLine("FirstName: " + names[0]);
-            Console.WriteLine("LastName: " + names[1]);
+			foreach (var word in words)
+			{
+				summaryWords.Add(word);
 
-            Console.WriteLine(fullName.Replace("Kenji", "Michael"));
 
-            if (String.IsNullOrWhiteSpace(" "))
-                Console.WriteLine("Invalid");
+				totalCharacters += word.Length + 1;
+				if (totalCharacters > maxLength)
+					break;
+			}
 
-            var str = "25";
-            var age = Convert.ToByte(str);
-            Console.WriteLine(age);
-
-            float price = 29.95f;
-			Console.WriteLine(price.ToString("C"));
+			return String.Join(" ", summaryWords) + "...";
         }
     }
 }
