@@ -1,5 +1,4 @@
-﻿using System;
-using System.Text;
+﻿using System.IO;
 
 namespace CSharpFundamentals
 {
@@ -8,21 +7,23 @@ namespace CSharpFundamentals
     {
         static void Main(string[] args)
         {
-            var builder = new StringBuilder("Hello world");
+            var path = @"c:\somefile.jpg";
 
-            builder
-                .Append('-', 10)
-                .AppendLine()
-                .Append("Header")
-                .AppendLine()
-                .Append('-', 10)
-                .Replace('-', '+')
-                .Remove(0, 10)
-                .Insert(0, new string('-', 10)); 
+            File.Copy(@"c:temp\myfile.jpg", @"d:\temp\myfile.jpg", true);
+            File.Delete(path);
+            if (File.Exists(path))
+            {
+                //
+            }
+            var content = File.ReadAllText(path);
 
-            Console.WriteLine(builder);
-
-            Console.WriteLine("First character: " + builder[0]);
+            var fileInfo = new FileInfo(path);
+            fileInfo.CopyTo("...");
+            fileInfo.Delete();
+            if (fileInfo.Exists)
+            {
+                //
+            }
         }
     }
 }
