@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 
 namespace CSharpFundamentals
 {
@@ -7,21 +8,15 @@ namespace CSharpFundamentals
     {
         static void Main(string[] args)
         {
-            Directory.CreateDirectory(@"c\temp\folder1");
+            var path = @"C:\Projects\CSharpFundamentals\HelloWorld\HelloWorld.sln";
 
-            var files = Directory.GetFiles(@"c:\projects\CSharpFundamentals", "*.*", SearchOption.AllDirectories);
-            foreach (var file in files) 
-                System.Console.WriteLine(file);
+            var dotIndex = path.IndexOf('.');
+            var extension = path.Substring(dotIndex);
 
-            var directories = Directory.GetDirectories(@"c\projects\CSharpFundamentals", "*.*", SearchOption.AllDirectories);
-            foreach (var directory in directories)
-                System.Console.WriteLine(directory);
-
-            Directory.Exists("...");
-
-            var directoryInfo = new DirectoryInfo("...");
-            directoryInfo.GetFiles();
-            directoryInfo.GetDirectories();
+            Console.WriteLine("Extension: " + Path.GetExtension(path));
+            Console.WriteLine("File Name: " + Path.GetFileName(path));
+            Console.WriteLine("File Name without Extension: " + Path.GetFileNameWithoutExtension(path));
+            Console.WriteLine("File Name without Extension: " + Path.GetFileNameWithoutExtension(path));
         }
     }
 }
