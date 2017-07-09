@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Text;
 
 namespace CSharpFundamentals
 {
@@ -8,31 +8,21 @@ namespace CSharpFundamentals
     {
         static void Main(string[] args)
         {
-			var sentence = "This is going to be a really really really really long sentence.";
-            var summary = SummarizeText(sentence, 25);
-            Console.WriteLine(summary);
-        }
+            var builder = new StringBuilder("Hello world");
 
-        static string SummarizeText(string text, int maxLength = 20)
-        {
-            if (text.Length < maxLength)
-                return text;
-            
-			var words = text.Split(' ');
-			var totalCharacters = 0;
-			var summaryWords = new List<string>();
+            builder
+                .Append('-', 10)
+                .AppendLine()
+                .Append("Header")
+                .AppendLine()
+                .Append('-', 10)
+                .Replace('-', '+')
+                .Remove(0, 10)
+                .Insert(0, new string('-', 10)); 
 
-			foreach (var word in words)
-			{
-				summaryWords.Add(word);
+            Console.WriteLine(builder);
 
-
-				totalCharacters += word.Length + 1;
-				if (totalCharacters > maxLength)
-					break;
-			}
-
-			return String.Join(" ", summaryWords) + "...";
+            Console.WriteLine("First character: " + builder[0]);
         }
     }
 }
